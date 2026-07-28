@@ -23,9 +23,5 @@ public class HorseEnginesClient {
     }
 
     @SubscribeEvent
-    static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        HorseEngines.LOGGER.info("HELLO FROM CLIENT SETUP");
-        HorseEngines.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-    }
+    static void onClientSetup(FMLClientSetupEvent event) {}
 }
