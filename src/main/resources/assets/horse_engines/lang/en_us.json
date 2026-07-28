@@ -1,0 +1,13 @@
+{
+  "itemGroup.horse_engines": "Example Mod Tab",
+  "block.horse_engines.example_block": "Example Block",
+  "item.horse_engines.example_item": "Example Item",
+
+  "horse_engines.configuration.title": "HorseEngines Configs",
+  "horse_engines.configuration.section.horse_engines.common.toml": "HorseEngines Configs",
+  "horse_engines.configuration.section.horse_engines.common.toml.title": "HorseEngines Configs",
+  "horse_engines.configuration.items": "Item List",
+  "horse_engines.configuration.logDirtBlock": "Log Dirt Block",
+  "horse_engines.configuration.magicNumberIntroduction": "Magic Number Text",
+  "horse_engines.configuration.magicNumber": "Magic Number"
+}
