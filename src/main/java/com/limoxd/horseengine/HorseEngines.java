@@ -1,5 +1,6 @@
 package com.limoxd.horseengine;
 
+import com.limoxd.horseengine.common.FeedingClass;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -50,6 +51,8 @@ public class HorseEngines {
         NeoForge.EVENT_BUS.register(this);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        FeedingClass.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {}
