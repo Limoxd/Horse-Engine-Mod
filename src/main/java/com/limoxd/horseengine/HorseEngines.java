@@ -1,5 +1,6 @@
 package com.limoxd.horseengine;
 
+import com.limoxd.horseengine.events.HorseInteractingEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -35,7 +36,9 @@ public class HorseEngines {
 
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {}
+    private void commonSetup(FMLCommonSetupEvent event) {
+        NeoForge.EVENT_BUS.register(new HorseInteractingEvent());
+    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {}
