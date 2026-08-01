@@ -28,7 +28,8 @@ public class HorseInteractingEvent {
 
         if (player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.LAVA_BUCKET)){
             player.sendSystemMessage(Component.literal("it works"));
-            player.sendSystemMessage(Component.literal(String.valueOf(horse.getAttribute(Attributes.MOVEMENT_SPEED))));
+            player.sendSystemMessage(Component.literal(String.valueOf(horse.getAttributeBaseValue(Attributes.MOVEMENT_SPEED))));
+
         }
 
         interaction.setCancellationResult(InteractionResult.SUCCESS);
