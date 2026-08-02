@@ -1,5 +1,6 @@
 package com.limoxd.horseengine;
 
+import com.limoxd.horseengine.effect.ModEffects;
 import com.limoxd.horseengine.events.HorseInteractingEvent;
 import org.slf4j.Logger;
 
@@ -33,6 +34,8 @@ public class HorseEngines {
         NeoForge.EVENT_BUS.register(this);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModEffects.register(modEventBus);
 
     }
 

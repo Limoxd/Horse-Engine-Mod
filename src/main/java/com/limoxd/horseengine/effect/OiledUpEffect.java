@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class OiledUpEffect extends MobEffect {
     public OiledUpEffect(MobEffectCategory category, int color) {
@@ -19,17 +20,15 @@ public class OiledUpEffect extends MobEffect {
     }
 
     @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return true;
-    }
+    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {return true;}
 
     @Override
     public MobEffect addAttributeModifier(Holder<Attribute> attribute, ResourceLocation id, double amount, AttributeModifier.Operation operation) {
+        attribute = Attributes.MOVEMENT_SPEED;
+        amount = 2.5;
+
         return super.addAttributeModifier(attribute, id, amount, operation);
     }
 
-    @Override
-    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        return super.applyEffectTick(livingEntity, amplifier);
-    }
+
 }
