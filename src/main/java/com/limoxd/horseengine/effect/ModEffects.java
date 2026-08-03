@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, HorseEngines.MODID);
 
-    public static final Holder<MobEffect> OILED_UP = MOB_EFFECTS.register("oiled_up", () -> new OiledUpEffect(MobEffectCategory.NEUTRAL, 635553)
+    public static final Holder<MobEffect> OILED_UP = MOB_EFFECTS.register("oiled_up", () -> new OiledUpEffect(MobEffectCategory.NEUTRAL, 3025193)
             .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(HorseEngines.MODID,"oiled_up"), 0.6, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
     public static void register(IEventBus EventBus) {
