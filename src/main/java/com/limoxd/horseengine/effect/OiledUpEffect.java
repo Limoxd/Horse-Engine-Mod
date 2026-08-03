@@ -23,12 +23,5 @@ public class OiledUpEffect extends MobEffect {
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {return true;}
 
     @Override
-    public MobEffect addAttributeModifier(Holder<Attribute> attribute, ResourceLocation id, double amount, AttributeModifier.Operation operation) {
-        attribute = Attributes.MOVEMENT_SPEED;
-        amount = 2.5;
-
-        return super.addAttributeModifier(attribute, id, amount, operation);
-    }
-
-
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {return true;}
 }
