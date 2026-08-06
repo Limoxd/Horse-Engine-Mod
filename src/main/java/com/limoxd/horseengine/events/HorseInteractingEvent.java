@@ -24,10 +24,10 @@ public class HorseInteractingEvent {
 
         Player player = interaction.getEntity();
         Horse horse = (Horse) interaction.getTarget();
+        MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000);
 
         if (player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.LAVA_BUCKET)){
             player.sendSystemMessage(Component.literal("it works"));
-            MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000);
             horse.addEffect(instance);
         }
 
