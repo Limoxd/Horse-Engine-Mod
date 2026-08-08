@@ -16,22 +16,25 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 public class HorseInteractingEvent {
 
     @SubscribeEvent
-    public void Interact(PlayerInteractEvent.EntityInteract interaction){
+    public void Interact(PlayerInteractEvent.EntityInteract interaction) {
         //runs only on serverside
-        if (!interaction.getLevel().isClientSide()){return;}
+        if (!interaction.getLevel().isClientSide()) {
+            return;
+        }
 
-        if (!(interaction.getTarget() instanceof Horse)){return;}
+        if (!(interaction.getTarget() instanceof Horse)) {
+            return;
+        }
 
         Player player = interaction.getEntity();
         Horse horse = (Horse) interaction.getTarget();
-        MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000);
+        MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000, 0, true, true, true);
 
-        if (player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.LAVA_BUCKET)){
+        if (player.getItemInHand(InteractionHand.MAIN_HAND).is(Items.LAVA_BUCKET)) {
             player.sendSystemMessage(Component.literal("it works"));
             horse.addEffect(instance);
         }
 
         interaction.setCancellationResult(InteractionResult.SUCCESS);
     }
-
 }
