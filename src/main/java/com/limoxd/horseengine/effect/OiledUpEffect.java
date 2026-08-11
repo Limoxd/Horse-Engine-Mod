@@ -15,8 +15,14 @@ public class OiledUpEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {return true;}
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {return true;}
 
     @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {return true;}
+    public void onEffectAdded(LivingEntity entity, int amplifier) {
+        super.onEffectAdded(entity, amplifier);
+    }
+
+    @Override
+    public void onEffectStarted(LivingEntity entity, int amplifier) {
+    }
 }

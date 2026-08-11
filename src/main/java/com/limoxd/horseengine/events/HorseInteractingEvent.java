@@ -17,8 +17,7 @@ public class HorseInteractingEvent {
 
     @SubscribeEvent
     public void Interact(PlayerInteractEvent.EntityInteract interaction) {
-        //runs only on serverside
-        if (!interaction.getLevel().isClientSide()) {
+        if (interaction.getLevel().isClientSide()) {
             return;
         }
 
