@@ -2,6 +2,7 @@ package com.limoxd.horseengine;
 
 import com.limoxd.horseengine.effect.ModEffects;
 import com.limoxd.horseengine.events.HorseInteractingEvent;
+import com.limoxd.horseengine.util.HorseEngineTags;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,7 +37,6 @@ public class HorseEngines {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ModEffects.register(modEventBus);
-
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
