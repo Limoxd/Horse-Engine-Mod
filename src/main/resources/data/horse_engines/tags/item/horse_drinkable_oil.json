@@ -1,0 +1,11 @@
+{
+  "values": [
+  "minecraft:lava_bucket",
+    "oritech:still_fuel_bucket",
+    "oritech:still_biofuel_bucket",
+    "oritech:still_diesel_bucket",
+    "createdieselgenerators:biodiesel_bucket",
+    "createdieselgenerators:diesel_bucket",
+    "createdieselgenerators:gasoline_bucket"
+  ]
+}

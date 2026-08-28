@@ -2,7 +2,6 @@ package com.limoxd.horseengine;
 
 import com.limoxd.horseengine.effect.ModEffects;
 import com.limoxd.horseengine.events.HorseInteractingEvent;
-import com.limoxd.horseengine.util.HorseEngineTags;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;

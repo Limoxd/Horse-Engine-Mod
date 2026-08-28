@@ -29,7 +29,7 @@ public class HorseInteractingEvent {
         Horse horse = (Horse) interaction.getTarget();
         MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000, 0, true, true, true);
 
-        if (player.getItemInHand(InteractionHand.MAIN_HAND).is(HorseEngineTags.Items.FEEDING_HORSE_OIL_ITEM)) {
+        if (player.getItemInHand(InteractionHand.MAIN_HAND).is(HorseEngineTags.Items.HORSE_DRINKABLE_OIL)) {
             player.getItemInHand(InteractionHand.MAIN_HAND).consumeAndReturn(1, horse);
             player.sendSystemMessage(Component.literal("it works"));
             horse.addEffect(instance);

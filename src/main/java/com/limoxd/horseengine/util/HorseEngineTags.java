@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class HorseEngineTags {
     public static class Items {
-        public static final TagKey<Item> FEEDING_HORSE_OIL_ITEM = createTag("feeding_horse_oil_item");
+        public static final TagKey<Item> HORSE_DRINKABLE_OIL = createTag("horse_drinkable_oil");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(HorseEngines.MODID, name));
