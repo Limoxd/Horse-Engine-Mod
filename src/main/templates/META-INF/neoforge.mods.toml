@@ -69,12 +69,15 @@ Feed oild to your horses to make them faster!!
     side = "BOTH"
 
 [[dependencies.horse_engines]]
-modId = "createdieselgenerators"
-type = "optional"
-versionRange = "[1.3.15, )"
-side = "BOTH"
-# Features are specific properties of the game environment, that you may want to declare you require. This example declares
-# that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
-# stop your mod loading on the server for example.
+    modId = "createdieselgenerators"
+    type = "optional"
+    versionRange = "[1.3.15, )"
+    side = "BOTH"
+
+[[dependencies.horse_engines]]
+    modId = "tfmg"
+    type = "optional"
+    versionRange = "[1.2.0, )"
+    side = "BOTH"
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
