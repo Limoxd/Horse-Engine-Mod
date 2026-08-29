@@ -21,17 +21,15 @@ public class HorseInteractingEvent {
             return;
         }
 
-        if (!(interaction.getTarget() instanceof Horse)) {
+        if (!(interaction.getTarget() instanceof Horse horse)) {
             return;
         }
 
         Player player = interaction.getEntity();
-        Horse horse = (Horse) interaction.getTarget();
         MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000, 0, true, true, true);
 
         if (player.getItemInHand(InteractionHand.MAIN_HAND).is(HorseEngineTags.Items.HORSE_DRINKABLE_OIL)) {
             player.getItemInHand(InteractionHand.MAIN_HAND).consumeAndReturn(1, horse);
-            player.sendSystemMessage(Component.literal("it works"));
             horse.addEffect(instance);
         }
 
