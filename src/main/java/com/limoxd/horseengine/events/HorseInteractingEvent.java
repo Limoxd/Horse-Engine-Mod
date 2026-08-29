@@ -2,7 +2,6 @@ package com.limoxd.horseengine.events;
 
 import com.limoxd.horseengine.effect.ModEffects;
 import com.limoxd.horseengine.util.HorseEngineTags;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
