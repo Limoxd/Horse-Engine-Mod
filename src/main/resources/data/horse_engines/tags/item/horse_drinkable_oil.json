@@ -1,13 +1,37 @@
 {
   "values": [
   "minecraft:lava_bucket",
-    "oritech:still_fuel_bucket",
-    "oritech:still_biofuel_bucket",
-    "oritech:still_diesel_bucket",
-    "createdieselgenerators:biodiesel_bucket",
-    "createdieselgenerators:diesel_bucket",
-    "createdieselgenerators:gasoline_bucket",
-    "tfmg:gasoline_bucket",
-    "tfmg:diesel_bucket"
+    {
+      "id": "oritech:still_fuel_bucket",
+      "required": false
+    },
+    {
+      "id":"oritech:still_biofuel_bucket",
+      "required": false
+    },
+    {
+      "id":"oritech:still_diesel_bucket",
+      "required": false
+    },
+    {
+      "id":"createdieselgenerators:biodiesel_bucket",
+      "required": false
+    },
+    {
+      "id":"createdieselgenerators:diesel_bucket",
+      "required": false
+    },
+    {
+      "id":"createdieselgenerators:gasoline_bucket",
+      "required": false
+    },
+    {
+      "id":"tfmg:gasoline_bucket",
+      "required": false
+    },
+    {
+      "id": "tfmg:diesel_bucket",
+      "required": false
+    }
   ]
 }
