@@ -2,6 +2,7 @@ package com.limoxd.horseengine.events;
 
 import com.limoxd.horseengine.effect.ModEffects;
 import com.limoxd.horseengine.util.HorseEngineTags;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -28,6 +29,7 @@ public class HorseInteractingEvent {
         MobEffectInstance instance = new MobEffectInstance(ModEffects.OILED_UP, 6000, 0, true, true, true);
 
         if (player.getItemInHand(InteractionHand.MAIN_HAND).is(HorseEngineTags.Items.HORSE_DRINKABLE_OIL)) {
+            horse.makeSound(SoundEvents.HORSE_EAT);
             player.getItemInHand(InteractionHand.MAIN_HAND).consumeAndReturn(1, horse);
             horse.addEffect(instance);
         }
