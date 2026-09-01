@@ -32,6 +32,18 @@
     {
       "id": "tfmg:diesel_bucket",
       "required": false
+    },
+    {
+      "id": "pneumaticcraft:biodiesel_bucket",
+      "required": false
+    },
+    {
+      "id": "pneumaticcraft:diesel_bucket",
+      "required": false
+    },
+    {
+      "id": "pneumaticcraft:gasoline_bucket",
+      "required": false
     }
   ]
 }

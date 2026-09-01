@@ -82,6 +82,12 @@ Feed oild to your horses to make them faster!!
     versionRange = "[1.2.0, )"
     ordering="NONE"
     side = "BOTH"
+[[dependencies.horse_engines]]
+    modId = "pneumaticcraft"
+    type = "optional"
+    versionRange = "[8.2.23, )"
+    ordering="NONE"
+    side = "BOTH"
 
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
