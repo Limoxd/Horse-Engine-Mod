@@ -44,6 +44,14 @@
     {
       "id": "pneumaticcraft:gasoline_bucket",
       "required": false
+    },
+    {
+      "id": "petrochem:gasoline_bucket",
+      "required": false
+    },
+    {
+      "id": "petrochem:diesel_bucket",
+      "required": false
     }
   ]
 }
