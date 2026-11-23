@@ -1,8 +1,11 @@
 package com.limoxd.horseengine.effect;
 
+import net.minecraft.client.particle.Particle;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
 
 public class OiledUpEffect extends MobEffect {
     public OiledUpEffect(MobEffectCategory category, int color) {
@@ -15,6 +18,16 @@ public class OiledUpEffect extends MobEffect {
     }
 
     @Override
+    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
+        if (livingEntity.isSprinting()){
+             Level level = null;
+             level.addParticle();
+        }
+
+        return true;
+    }
+
+    @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {return true;}
 
     @Override
@@ -23,6 +36,5 @@ public class OiledUpEffect extends MobEffect {
     }
 
     @Override
-    public void onEffectStarted(LivingEntity entity, int amplifier) {
-    }
+    public void onEffectStarted(LivingEntity entity, int amplifier) {}
 }
