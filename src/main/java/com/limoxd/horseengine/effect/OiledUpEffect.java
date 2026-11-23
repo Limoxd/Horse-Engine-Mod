@@ -2,6 +2,7 @@ package com.limoxd.horseengine.effect;
 
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,9 +22,13 @@ public class OiledUpEffect extends MobEffect {
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (livingEntity.isSprinting()){
              Level level = null;
-             level.addParticle();
+             level.addParticle(
+                     ParticleTypes.CAMPFIRE_COSY_SMOKE,
+                     livingEntity.getX(),
+                     livingEntity.getY(),
+                     livingEntity.getZ(),
+                     1, 1, 1);
         }
-
         return true;
     }
 
