@@ -8,6 +8,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 
+
 public class OiledUpEffect extends MobEffect {
     public OiledUpEffect(MobEffectCategory category, int color) {
         super(category, color);
@@ -20,15 +21,15 @@ public class OiledUpEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (livingEntity.isSprinting()){
-             Level level = null;
-             level.addParticle(
-                     ParticleTypes.CAMPFIRE_COSY_SMOKE,
-                     livingEntity.getX(),
-                     livingEntity.getY(),
-                     livingEntity.getZ(),
-                     1, 1, 1);
-        }
+        Level level = livingEntity.getCommandSenderWorld();
+        double paX = livingEntity.getX();
+        double paY = livingEntity.getY();
+        double paZ = livingEntity.getZ();
+        double SPX = 0;
+        double SPY = 0.05;
+        double SPZ = 0;
+        level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, paX, paY, paZ, SPX, SPY, SPZ);
+
         return true;
     }
 
